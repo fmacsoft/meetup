@@ -15,8 +15,11 @@ pipeline {
         // sh "zip -r ${ARTIFACTOR} ./"
       echo "este paso funcaba con el zip xD"
       sh "touch ${ARTIFACTOR}"
-      sh "docker build -t myimage:${env.BUILD_NUMBER} ."
-      sh "docker tag myimage:${env.BUILD_NUMBER} myimage:latest"
+      //sh "docker build -t myimage:${env.BUILD_NUMBER} ."
+      //sh "docker tag myimage:${env.BUILD_NUMBER} myimage:latest"
+      sh "env"
+      sh $"path"
+      
       }
     }
     stage("Test") {
