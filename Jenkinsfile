@@ -12,7 +12,8 @@ pipeline {
     }
     stage("Build") {
       steps {
-        sh "cd /usr/bin/ && zip -r ${ARTIFACTOR} ./"
+        // sh "zip -r ${ARTIFACTOR} ./"
+      echo "este paso funcaba con el zip xD"
       }
     }
     stage("Test") {
