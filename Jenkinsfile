@@ -14,6 +14,7 @@ pipeline {
       steps {
         // sh "zip -r ${ARTIFACTOR} ./"
       echo "este paso funcaba con el zip xD"
+      touch "${env.BUILD_NUMBER}.zip"
       }
     }
     stage("Test") {
