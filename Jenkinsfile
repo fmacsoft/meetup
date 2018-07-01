@@ -12,7 +12,7 @@ pipeline {
     }
     stage("Build") {
       steps {
-        sh "/usr/bin/zip -r ${ARTIFACTOR} ./"
+        sh "cd /usr/bin/ && zip -r ${ARTIFACTOR} ./"
       }
     }
     stage("Test") {
